@@ -29,4 +29,8 @@ O sitema fará um scan para verificar a credencial do participante a fim de perm
 
 ### Requisitos não-funcionais
 
-- [ ] o chek-in no evento só será realizado através de um QRCode
+- [ ] O chek-in no evento só será realizado através de um QRCode
+
+### EXTRAS
+
+- [ ] Suportar cadastro de um participante em vários eventos??

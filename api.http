@@ -2,7 +2,22 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-  "title": "My Event",
-  "details": "This is a great event",
-  "maximumAttendees": 100
+  "title": "Event with maximum attendees",
+  "details": null,
+  "maximumAttendees": 1
 }
+
+###
+POST http://localhost:3333/events/4545c18f-6527-4498-b92a-655d5348c8bf/attendees
+Content-Type: application/json
+
+{
+  "name": "Samuel Rocha",
+  "email": "samuelsilv2.rocha@gmail.com"
+}
+
+###
+GET http://localhost:3333/events/4545c18f-6527-4498-b92a-655d5348c8bf
+
+###
+GET http://localhost:3333/attendees/2/badge
