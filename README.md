@@ -14,26 +14,22 @@ O sitema fará um scan para verificar a credencial do participante a fim de perm
 
 ### Requisitos funcionais
 
-- [ ] O organizador deve poder cadastrar um novo evento;
-- [ ] O organizador deve poder visualizar dados de um evento;
-- [ ] O organizador deve poder visualizar a lista de participantes;
-- [ ] O participante deve poder se inscrever em um evento;
-- [ ] O participante deve poder visualizar seu crachá de inscrição;
-- [ ] O participante deve poder realizar check-in no evento;
+- [x] O organizador deve poder cadastrar um novo evento;
+- [x] O organizador deve poder visualizar dados de um evento;
+- [x] O organizador deve poder visualizar a lista de participantes;
+- [x] O participante deve poder se inscrever em um evento;
+- [x] O participante deve poder visualizar seu crachá de inscrição;
+- [x] O participante deve poder realizar check-in no evento;
 
 ### Regras de negócio
 
-- [ ] O participante só pode se inscrever em um evento de uma única vez;
-- [ ] O participante só pode se inscrever em eventos com vagas disponíveis;
-- [ ] O participante só pode realizar check-in em um evento uma única vez;
+- [x] O participante só pode se inscrever em um evento de uma única vez;
+- [x] O participante só pode se inscrever em eventos com vagas disponíveis;
+- [x] O participante só pode realizar check-in em um evento uma única vez;
 
 ### Requisitos não-funcionais
 
-- [ ] O chek-in no evento só será realizado através de um QRCode
-
-### EXTRAS
-
-- [ ] Suportar cadastro de um participante em vários eventos??
+- [x] O chek-in no evento só será realizado através de um QRCode
 
 ### Observações pessoais
 
