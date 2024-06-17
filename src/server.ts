@@ -1,5 +1,8 @@
 import fastify from "fastify";
+import fastifySwagger from "@fastify/swagger";
+import fastifySwaggerUI from "@fastify/swagger-ui";
 import {
+	jsonSchemaTransform,
 	serializerCompiler,
 	validatorCompiler
 } from "fastify-type-provider-zod";
@@ -11,6 +14,25 @@ import { checkIn } from "./routes/check-in";
 import { getEventAttendees } from "./routes/get-event-attendees";
 
 const app = fastify();
+
+app.register(
+	fastifySwagger, {
+		swagger: {
+			consumes: ["application/json"],
+			produces: ["application/json"],
+			info: {
+				title: "pass.in",
+				description: "especificação da API pass.in construida no NLW Unite",
+				version: "1.0.0"
+			},
+		},
+		transform: jsonSchemaTransform
+	}
+)
+
+app.register(fastifySwaggerUI, {
+	routePrefix: "/docs",
+})
 
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);

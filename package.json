@@ -7,7 +7,7 @@
     "dev": "tsx watch --env-file .env src/server.ts"
   },
   "prisma": {
-    "seed": "tsx prisma/seed.ts" 
+    "seed": "tsx prisma/seed.ts"
   },
   "keywords": [],
   "author": "@rochasamuels",
@@ -19,6 +19,8 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^4.0.0",
     "@prisma/client": "^5.15.0",
     "fastify": "^4.27.0",
     "fastify-type-provider-zod": "^1.2.0",
