@@ -12,8 +12,14 @@ import { registerForEvent } from "./routes/register-for-event";
 import { getAttendeeBadge } from "./routes/get-attendee-badge";
 import { checkIn } from "./routes/check-in";
 import { getEventAttendees } from "./routes/get-event-attendees";
+import { errorHandler } from "./error-handler";
+import fastifyCors from "@fastify/cors";
 
 const app = fastify();
+
+app.register(fastifyCors, {
+	origin: "*", //em prod o domínio do front deve estar aqui
+})
 
 app.register(
 	fastifySwagger, {
@@ -44,7 +50,9 @@ app.register(getAttendeeBadge);
 app.register(checkIn);
 app.register(getEventAttendees);
 
-app.listen({ port: 3333 }, (err, address) => {
+app.setErrorHandler(errorHandler);
+
+app.listen({ port: 3333, host: '0.0.0.0' }, (err, address) => {
 	if (err) {
 		console.error(err);
 		process.exit(1);
