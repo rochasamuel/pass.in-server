@@ -1,4 +1,5 @@
-POST http://localhost:3333/events
+### Create event
+POST http://localhost:3333/events 
 Content-Type: application/json
 
 {
@@ -7,7 +8,7 @@ Content-Type: application/json
   "maximumAttendees": 1
 }
 
-###
+### Create Attendee to event
 POST http://localhost:3333/events/4545c18f-6527-4498-b92a-655d5348c8bf/attendees
 Content-Type: application/json
 
@@ -16,8 +17,17 @@ Content-Type: application/json
   "email": "samuelsilv2.rocha@gmail.com"
 }
 
-###
+### Get event info
 GET http://localhost:3333/events/4545c18f-6527-4498-b92a-655d5348c8bf
 
-###
+### Get attendee badge
 GET http://localhost:3333/attendees/2/badge
+
+### Attendee checkin
+GET http://localhost:3333/attendees/2/checkin
+
+### Get event attendees
+GET http://localhost:3333/events/26c584b2-3eca-403a-911b-353515afe0dd/attendees
+
+### Get event attendees paginated and filtered
+GET http://localhost:3333/events/26c584b2-3eca-403a-911b-353515afe0dd/attendees?query=Rocha&page=0

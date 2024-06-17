@@ -34,3 +34,13 @@ O sitema fará um scan para verificar a credencial do participante a fim de perm
 ### EXTRAS
 
 - [ ] Suportar cadastro de um participante em vários eventos??
+
+### Observações pessoais
+
+- O sistema está estruturado de modo que o Participante está fortemente atrelado a um evento, ou seja,
+no contexto do banco de dados, um _Attendee_ comporta no seu model o _eventId_ que ele está atrelado.
+Se esse mesmo participante quiser se inscrever em outro evento um novo registro vai ser criado, com base
+nesse novo _eventId_. Essa abordagem funciona bem para esse caso específico, em que não há login e etc. 
+Numa abordagem em que o participante tem um login e tudo mais, creio que o ideal seria Uma tabela para 
+_User_ outra para _Event_ e posteriormente um relacionamento vinculando os dois como por exemplo _Participation_.
+Desse modo teriamos o checkin vinculado a esse relacionamento, e não uma tabela de _CheckIn_. 
